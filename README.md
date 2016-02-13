@@ -5,6 +5,15 @@
 **YOURLS** is a set of PHP scripts that will allow you to run <strong>Y</strong>our <strong>O</strong>wn <strong>URL</strong> <strong>S</strong>hortener. You'll have full control over your data, detailed stats, analytics, plugins, and more. It's free.
 
 
+Changes
+-----------
+This fork of YOURLS simply changes defaults for YOURLS so that it can easily be hosted on red hat's openshift platform, and the addition of some extra plugins (these need to be enabled after starting YOURLS). The database and so farth are all automated; the only manual action needed is to set your username and password as environment variables with rhc, and the google analytics tracking code as well, if you want.
+* Run `rhc env set YOURLS_USERNAME` to set your login username
+* Run `rhc env set YOURLS_PASSWORD` to set your login password
+* Run `rhc env set POWER_GA_MP_GAID` to set your ga tracking code.
+
+The text below is unedited from the original YOURLS readme.
+
 Quick Start
 -----------
 To get started, check [yourls.org](http://yourls.org)!  
